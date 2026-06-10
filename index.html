@@ -3,298 +3,187 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Portfolio môn Nhập môn Công nghệ số và Trí tuệ nhân tạo của Trương Bảo Kiên.">
-    <title>Trương Bảo Kiên | Portfolio VNU1001</title>
+    <meta name="description" content="Portfolio kỹ năng số và AI của Trương Bảo Kiên - MSSV 25020207.">
+    <title>Trương Bảo Kiên | IT Digital Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <canvas id="motionCanvas" aria-hidden="true"></canvas>
+    <canvas id="networkCanvas" aria-hidden="true"></canvas>
+    <div class="scanline" aria-hidden="true"></div>
     <div class="progress" aria-hidden="true"></div>
-    <header class="site-header" id="top">
-      <a class="brand" href="#top" aria-label="Về đầu trang">
-        <span class="brand-mark">BK</span>
-        <span>Digital Portfolio</span>
+
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Về đầu trang">
+        <span class="brand-logo">TBK</span>
+        <span>Portfolio<span class="accent-dot">.</span>25020207</span>
       </a>
-      <nav class="nav" aria-label="Điều hướng chính">
+      <nav class="nav" aria-label="Điều hướng">
         <a href="#about">Giới thiệu</a>
-        <a href="#projects">Bài tập</a>
-        <a href="#evidence">Kỹ năng</a>
-        <a href="#viewer">Báo cáo</a>
-        <a href="#reflection">Tổng kết</a>
+        <a href="#projects">Dự án</a>
+        <a href="#skills">Kỹ năng</a>
+        <a href="#reports">Báo cáo</a>
+        <a href="#summary">Tổng kết</a>
       </nav>
+      <button class="theme-toggle" type="button" aria-label="Đổi giao diện sáng tối" aria-pressed="false">
+        <span class="theme-icon" aria-hidden="true">◐</span>
+        <span class="theme-text">Light</span>
+      </button>
     </header>
 
     <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-media" aria-hidden="true">
-          <div class="grid-lines"></div>
-          <div class="signal signal-one"></div>
-          <div class="signal signal-two"></div>
-        </div>
-        <div class="hero-content reveal">
-          <p class="eyebrow">VNU1001_E252015 | Nhập môn CNS & AI</p>
-          <h1 id="hero-title">Trương Bảo Kiên</h1>
+      <section class="hero section" id="home">
+        <div class="hero-copy reveal">
+          <p class="kicker">VNU1001_E252015 / Digital Skills / Responsible AI</p>
+          <h1>Trương Bảo Kiên</h1>
           <p class="hero-lead">
-            Portfolio học tập tổng hợp các sản phẩm môn học, thể hiện năng lực tổ chức thông tin,
-            ứng dụng công cụ số và sử dụng AI có trách nhiệm trong học tập.
+            Portfolio kỹ năng số ghi lại hành trình học tập qua 6 bài thực hành:
+            quản lý tệp tin, khai thác dữ liệu, prompt engineering, cộng tác trực tuyến,
+            sáng tạo nội dung số và liêm chính học thuật trong môi trường AI.
           </p>
-          <div class="hero-actions" aria-label="Liên kết nhanh">
-            <a class="button primary" href="#projects">Xem bài tập</a>
-            <a class="button ghost" href="#viewer">Mở báo cáo PDF</a>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">Xem quy trình từng bài</a>
+            <a class="btn secondary" href="#reports">Báo cáo PDF đọc thêm</a>
           </div>
         </div>
-        <aside class="profile-panel reveal" data-tilt aria-label="Thông tin sinh viên">
-          <img src="assets/profile-truong-bao-kien.jpg" alt="Ảnh chân dung Trương Bảo Kiên">
-          <div class="profile-card">
-            <p class="profile-name">Trương Bảo Kiên</p>
-            <p>Công nghệ thông tin</p>
-            <p>Trường Đại học Công nghệ - ĐHQGHN</p>
-            <dl>
-              <div>
-                <dt>Mã SV</dt>
-                <dd>25020207</dd>
-              </div>
-              <div>
-                <dt>Lớp</dt>
-                <dd>K70I-IT4</dd>
-              </div>
-            </dl>
+
+        <aside class="terminal-card reveal" aria-label="Thông tin nhanh">
+          <div class="terminal-top">
+            <span></span><span></span><span></span>
+            <code>student.profile</code>
+          </div>
+          <img src="assets/site/site-image-01.jpg" alt="Ảnh chân dung Trương Bảo Kiên">
+          <div class="terminal-lines">
+            <p><span>name</span> = "Trương Bảo Kiên"</p>
+            <p><span>major</span> = "Công nghệ thông tin"</p>
+            <p><span>class</span> = "K70I-IT4"</p>
+            <p><span>student_id</span> = "25020207"</p>
           </div>
         </aside>
       </section>
 
-      <section class="section about-section" id="about" aria-labelledby="about-title">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Giới thiệu</p>
-          <h2 id="about-title">Một hồ sơ học tập số gọn, rõ và có cá tính.</h2>
+      <section class="section about" id="about">
+        <div class="section-title reveal">
+          <p class="kicker">01 / Giới thiệu</p>
+          <h2>Hồ sơ học tập số được dựng lại từ Google Site gốc.</h2>
         </div>
-        <div class="about-grid reveal">
-          <article class="about-copy">
-            <h3>Mục tiêu portfolio</h3>
+        <div class="about-grid">
+          <article class="glass-panel reveal">
+            <h3>Lời mở đầu</h3>
             <p>
-              Website này được xây dựng để lưu trữ các bài tập, minh chứng quá trình học tập và
-              trình bày cách em tiếp cận công nghệ số, trí tuệ nhân tạo và làm việc trực tuyến.
+              Chào mừng bạn đến với Portfolio kỹ năng số của tôi. Đây là nơi lưu trữ và phản ánh
+              hành trình trải nghiệm, học tập thông qua chuỗi bài tập thực hành về công nghệ và trí tuệ nhân tạo.
             </p>
             <p>
-              Mỗi sản phẩm được đặt trong một ngữ cảnh rõ ràng: mục tiêu, kỹ năng vận dụng,
-              kết quả đầu ra và đường dẫn báo cáo để thầy cô có thể xem trực tuyến sau khi deploy.
+              Dự án không chỉ đáp ứng yêu cầu môn học mà còn là minh chứng cho năng lực thích nghi
+              và làm chủ công nghệ trong kỷ nguyên số.
             </p>
           </article>
-          <div class="info-list" aria-label="Thông tin cá nhân">
-            <div>
-              <span>Ngành học</span>
-              <strong>Công nghệ thông tin</strong>
-            </div>
-            <div>
-              <span>Mã lớp môn học</span>
-              <strong>VNU1001_E252015</strong>
-            </div>
-            <div>
-              <span>Sở thích</span>
-              <strong>Đọc sách - Lập trình - Khám phá công nghệ</strong>
-            </div>
+          <div class="fact-grid reveal">
+            <div><span>Họ và tên</span><strong>Trương Bảo Kiên</strong></div>
+            <div><span>Ngành học</span><strong>Công nghệ thông tin</strong></div>
+            <div><span>Trường</span><strong>Đại học Công nghệ - ĐHQGHN</strong></div>
+            <div><span>Lớp</span><strong>K70I-IT4</strong></div>
+            <div><span>MSSV</span><strong>25020207</strong></div>
+            <div><span>Sở thích</span><strong>Đọc sách - Lập trình - Khám phá Công nghệ</strong></div>
           </div>
         </div>
       </section>
 
-      <section class="section trust-section" aria-labelledby="trust-title">
-        <div class="section-heading compact reveal">
-          <p class="eyebrow">AI có trách nhiệm</p>
-          <h2 id="trust-title">Nguyên tắc T.R.U.S.T.E trong học tập</h2>
-        </div>
-        <div class="trust-layout reveal">
-          <img src="assets/infographic-trust-ai.jpg" alt="Infographic sử dụng AI có trách nhiệm trong học tập">
-          <div class="trust-copy">
-            <p>
-              Infographic tóm tắt bộ nguyên tắc cá nhân khi dùng AI: kiểm chứng thông tin, giữ tư duy
-              đi trước, chịu trách nhiệm với bài làm, xem AI là công cụ hỗ trợ, minh bạch trích dẫn,
-              đồng thời bảo vệ dữ liệu và liêm chính học thuật.
-            </p>
-            <a class="text-link" href="assets/infographic-trust-ai.jpg" target="_blank" rel="noopener">Mở infographic kích thước đầy đủ</a>
-          </div>
+      <section class="section mission">
+        <div class="mission-grid">
+          <article class="mission-card reveal">
+            <span>portfolio.goal</span>
+            <h3>Hệ thống hóa toàn bộ bài tập thực hành</h3>
+            <p>Lưu giữ minh chứng cho quá trình rèn luyện kỹ năng từ quản lý tệp tin đến làm chủ các công cụ AI hiện đại.</p>
+          </article>
+          <article class="mission-card reveal">
+            <span>learning.target</span>
+            <h3>Phát triển kỹ năng số cho ngành CNTT</h3>
+            <p>Ứng dụng công nghệ thông tin và AI vào học tập theo hướng chủ động, có kiểm chứng và có trách nhiệm.</p>
+          </article>
+          <article class="mission-card reveal">
+            <span>integrity.mode</span>
+            <h3>Minh bạch khi sử dụng AI</h3>
+            <p>Mọi sự hỗ trợ từ AI được nhìn nhận như công cụ, đi cùng tư duy phản biện và liêm chính học thuật.</p>
+          </article>
         </div>
       </section>
 
-      <section class="section projects-section" id="projects" aria-labelledby="projects-title">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Dự án môn học</p>
-          <h2 id="projects-title">Các bài tập đã hoàn thành</h2>
+      <section class="section projects" id="projects">
+        <div class="section-title reveal">
+          <p class="kicker">02 / Dự án học tập</p>
+          <h2>Quy trình thực hiện từng bài, trình bày trực tiếp trên web.</h2>
+          <p class="section-note">
+            Nội dung dưới đây được rút từ Google Site gốc: mỗi bài có mục tiêu, các bước làm,
+            điểm phân tích chính và sản phẩm cuối cùng. PDF chỉ nằm ở cuối trang để thầy cô đọc thêm.
+          </p>
         </div>
-        <div class="filters reveal" aria-label="Lọc bài tập theo nhóm kỹ năng">
-          <button class="filter is-active" type="button" data-filter="all">Tất cả</button>
+        <div class="filter-bar reveal" aria-label="Lọc dự án">
+          <button class="filter active" type="button" data-filter="all">Tất cả</button>
           <button class="filter" type="button" data-filter="digital">Kỹ năng số</button>
           <button class="filter" type="button" data-filter="ai">AI</button>
           <button class="filter" type="button" data-filter="collab">Cộng tác</button>
+          <button class="filter" type="button" data-filter="ethics">Liêm chính</button>
         </div>
-        <div class="project-grid detailed-projects">
-          <article class="project-card reveal" data-category="digital" data-tilt>
-            <span class="project-index">01</span>
-            <h3>Máy tính và thiết bị ngoại vi</h3>
-            <p class="project-goal">Mục tiêu: nhận diện các thành phần cơ bản của máy tính và hiểu vai trò của thiết bị ngoại vi trong quá trình học tập, làm việc số.</p>
-            <ol class="process-list">
-              <li>Tìm hiểu các nhóm phần cứng chính như bộ xử lý, bộ nhớ, lưu trữ, thiết bị nhập và thiết bị xuất.</li>
-              <li>Phân loại thiết bị ngoại vi theo chức năng: nhập dữ liệu, hiển thị kết quả, lưu trữ và kết nối.</li>
-              <li>So sánh vai trò của từng thiết bị trong một tình huống học tập cụ thể.</li>
-              <li>Tổng hợp nội dung thành báo cáo, kèm nhận xét về cách chọn thiết bị phù hợp với nhu cầu cá nhân.</li>
-            </ol>
-            <p class="project-result">Kết quả: nắm được cấu trúc cơ bản của hệ thống máy tính và biết giải thích vì sao từng thiết bị cần thiết trong môi trường học tập số.</p>
-          </article>
-          <article class="project-card reveal" data-category="digital" data-tilt>
-            <span class="project-index">02</span>
-            <h3>Khai thác dữ liệu và thông tin</h3>
-            <p class="project-goal">Mục tiêu: biết tìm kiếm, chọn lọc và đánh giá thông tin trước khi sử dụng trong học tập hoặc nghiên cứu.</p>
-            <ol class="process-list">
-              <li>Xác định chủ đề cần tìm hiểu và chuyển thành các từ khóa tìm kiếm rõ ràng.</li>
-              <li>Tìm tài liệu từ nhiều nguồn như công cụ tìm kiếm, tài liệu học thuật và trang thông tin chính thống.</li>
-              <li>Đánh giá nguồn dựa trên tác giả, thời điểm công bố, độ liên quan và mức độ đáng tin cậy.</li>
-              <li>Tổng hợp thông tin theo ý chính, tránh sao chép máy móc và ghi nhận nguồn tham khảo.</li>
-            </ol>
-            <p class="project-result">Kết quả: hình thành quy trình biến dữ liệu rời rạc thành thông tin có chọn lọc, có căn cứ và dùng được trong bài học.</p>
-          </article>
-          <article class="project-card reveal" data-category="ai" data-tilt>
-            <span class="project-index">03</span>
-            <h3>Tổng quan về trí tuệ nhân tạo</h3>
-            <p class="project-goal">Mục tiêu: hiểu AI là gì, các ứng dụng phổ biến của AI và cách đặt yêu cầu để AI hỗ trợ học tập hiệu quả hơn.</p>
-            <ol class="process-list">
-              <li>Khái quát khái niệm trí tuệ nhân tạo, các dạng ứng dụng thường gặp và ví dụ trong đời sống.</li>
-              <li>Phân tích lợi ích, giới hạn và rủi ro khi dùng AI trong học tập.</li>
-              <li>Thử nghiệm cách đặt câu hỏi hoặc prompt có ngữ cảnh, yêu cầu và định dạng đầu ra rõ ràng.</li>
-              <li>Đối chiếu kết quả AI với hiểu biết cá nhân để điều chỉnh nội dung trước khi đưa vào báo cáo.</li>
-            </ol>
-            <p class="project-result">Kết quả: có cái nhìn cân bằng hơn về AI, biết dùng AI như công cụ hỗ trợ chứ không thay thế tư duy cá nhân.</p>
-          </article>
-          <article class="project-card featured reveal" data-category="collab" data-tilt>
-            <span class="project-index">04</span>
-            <h3>Công cụ hợp tác trực tuyến cho dự án nhóm</h3>
-            <p class="project-goal">Mục tiêu: vận dụng công cụ trực tuyến để tổ chức công việc nhóm, chia sẻ tài liệu và theo dõi tiến độ.</p>
-            <ol class="process-list">
-              <li>Xác định nhu cầu của nhóm: giao việc, lưu tài liệu, trao đổi nhanh và cập nhật trạng thái.</li>
-              <li>Sử dụng công cụ quản lý nhiệm vụ để chia đầu việc, gán người phụ trách và đặt mốc hoàn thành.</li>
-              <li>Tổ chức tài liệu nhóm trên nền tảng lưu trữ trực tuyến để mọi thành viên cùng truy cập.</li>
-              <li>Ghi lại minh chứng phối hợp và đánh giá ưu điểm, hạn chế của cách làm việc trực tuyến.</li>
-            </ol>
-            <p class="project-result">Kết quả: hiểu cách phối hợp nhóm có tổ chức hơn, giảm thất lạc tài liệu và minh bạch trách nhiệm của từng thành viên.</p>
-          </article>
-          <article class="project-card reveal" data-category="ai" data-tilt>
-            <span class="project-index">05</span>
-            <h3>AI tạo sinh hỗ trợ sáng tạo nội dung</h3>
-            <p class="project-goal">Mục tiêu: sử dụng AI tạo sinh để hỗ trợ lên ý tưởng, xây dựng nội dung và hoàn thiện sản phẩm truyền thông số.</p>
-            <ol class="process-list">
-              <li>Xác định chủ đề, đối tượng người xem và thông điệp chính của sản phẩm nội dung.</li>
-              <li>Dùng AI để gợi ý dàn ý, câu chữ, hình ảnh hoặc phương án trình bày ban đầu.</li>
-              <li>Chọn lọc kết quả phù hợp, chỉnh sửa lại bằng ngôn ngữ và góc nhìn cá nhân.</li>
-              <li>Hoàn thiện sản phẩm bằng công cụ thiết kế, kiểm tra tính nhất quán và tính học thuật của nội dung.</li>
-            </ol>
-            <p class="project-result">Kết quả: tạo được sản phẩm số có sự hỗ trợ của AI nhưng vẫn thể hiện vai trò biên tập, lựa chọn và chịu trách nhiệm của người học.</p>
-          </article>
-          <article class="project-card reveal" data-category="ai" data-tilt>
-            <span class="project-index">06</span>
-            <h3>Sử dụng AI có trách nhiệm</h3>
-            <p class="project-goal">Mục tiêu: xây dựng nguyên tắc cá nhân khi dùng AI để đảm bảo trung thực, minh bạch và an toàn dữ liệu.</p>
-            <ol class="process-list">
-              <li>Tìm hiểu các khuyến nghị về sử dụng AI trong học tập và nghiên cứu.</li>
-              <li>Ghi lại cách AI hỗ trợ trong một nhiệm vụ cụ thể, từ gợi ý ban đầu đến chỉnh sửa cuối cùng.</li>
-              <li>Phân tích các rủi ro như sao chép máy móc, thông tin sai, lộ dữ liệu cá nhân và phụ thuộc quá mức.</li>
-              <li>Xây dựng bộ nguyên tắc T.R.U.S.T.E: kiểm chứng, tư duy đi trước, trách nhiệm, công cụ hỗ trợ, minh bạch và đạo đức.</li>
-            </ol>
-            <p class="project-result">Kết quả: hình thành thói quen dùng AI có kiểm soát, biết khai báo khi cần và luôn chịu trách nhiệm với sản phẩm cuối cùng.</p>
-          </article>
+        <div id="projectList" class="project-list"></div>
+      </section>
+
+      <section class="section skills" id="skills">
+        <div class="section-title reveal">
+          <p class="kicker">03 / Năng lực đạt được</p>
+          <h2>Kỹ năng số quan trọng sau học phần.</h2>
+        </div>
+        <div class="skill-grid reveal">
+          <article><span>01</span><h3>Prompt Engineering</h3><p>Thiết kế prompt nâng cao để khai thác AI chính xác và có kiểm soát.</p></article>
+          <article><span>02</span><h3>Sáng tạo đa phương tiện</h3><p>Từ kịch bản, hình ảnh đến thiết kế sản phẩm truyền thông số với AI.</p></article>
+          <article><span>03</span><h3>Cộng tác trực tuyến</h3><p>Điều phối nhóm qua công cụ quản lý, tài liệu chung và kênh trao đổi nhanh.</p></article>
+          <article><span>04</span><h3>Đạo đức học thuật</h3><p>Kiểm chứng thông tin, bảo vệ dữ liệu và công bố minh bạch khi dùng AI.</p></article>
         </div>
       </section>
 
-      <section class="section evidence-section" id="evidence" aria-labelledby="evidence-title">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Minh chứng năng lực</p>
-          <h2 id="evidence-title">6 lĩnh vực kỹ năng được rèn luyện</h2>
+      <section class="section reports" id="reports">
+        <div class="section-title reveal">
+          <p class="kicker">04 / Tài liệu đọc thêm</p>
+          <h2>Báo cáo PDF và link Drive để đối chiếu chi tiết.</h2>
           <p class="section-note">
-            Mỗi bài tập đại diện cho một nhóm kỹ năng trọng tâm của học phần, từ thao tác dữ liệu
-            đến tư duy phản biện khi sử dụng AI.
+            Phần trình bày chính nằm ở các workflow phía trên. Khu vực này chỉ nhúng báo cáo để thầy cô
+            mở đọc thêm, kiểm tra minh chứng và xem bản đầy đủ.
           </p>
         </div>
-        <div class="skill-gallery reveal">
-          <article>
-            <span>01</span>
-            <h3>Quản lý dữ liệu</h3>
-            <p>Tổ chức tập tin, đặt tên tài liệu và lưu trữ sản phẩm học tập có hệ thống.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Tìm kiếm học thuật</h3>
-            <p>Xây dựng từ khóa, chọn nguồn phù hợp và đánh giá độ tin cậy của thông tin.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Tư duy về AI</h3>
-            <p>Nhận diện khả năng, giới hạn và tác động của trí tuệ nhân tạo trong học tập.</p>
-          </article>
-          <article>
-            <span>04</span>
-            <h3>Cộng tác trực tuyến</h3>
-            <p>Phối hợp nhóm bằng công cụ số, chia sẻ tài liệu và quản lý tiến độ công việc.</p>
-          </article>
-          <article>
-            <span>05</span>
-            <h3>Sáng tạo nội dung</h3>
-            <p>Kết hợp AI tạo sinh với chỉnh sửa cá nhân để tạo sản phẩm số có dấu ấn riêng.</p>
-          </article>
-          <article>
-            <span>06</span>
-            <h3>Trách nhiệm học thuật</h3>
-            <p>Kiểm chứng, minh bạch, bảo vệ dữ liệu và không phụ thuộc máy móc vào AI.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section viewer-section" id="viewer" aria-labelledby="viewer-title">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Tài liệu đọc thêm</p>
-          <h2 id="viewer-title">Báo cáo chi tiết để thầy cô xem thêm</h2>
-          <p class="section-note">
-            Phần trên đã tóm tắt quy trình thực hiện từng bài. Các file PDF bên dưới chỉ dùng làm
-            minh chứng chi tiết, tài liệu đối chiếu và đọc thêm khi cần xem đầy đủ nội dung báo cáo.
-          </p>
-        </div>
-
-        <div class="viewer-layout reveal">
-          <div class="report-list" id="reportList" aria-label="Danh sách báo cáo"></div>
-          <div class="viewer-frame-wrap">
-            <div class="viewer-toolbar">
-              <strong id="activeReportTitle">Báo cáo</strong>
+        <div class="report-layout reveal">
+          <div id="reportList" class="report-list"></div>
+          <div class="pdf-panel">
+            <div class="pdf-toolbar">
+              <strong id="activeReportTitle">Báo cáo chi tiết</strong>
               <a id="openReportLink" href="#" target="_blank" rel="noopener">Mở tab mới</a>
             </div>
-            <iframe id="reportFrame" title="Trình xem báo cáo PDF"></iframe>
+            <iframe id="reportFrame" title="Báo cáo PDF đọc thêm"></iframe>
           </div>
         </div>
       </section>
 
-      <section class="section reflection-section" id="reflection" aria-labelledby="reflection-title">
-        <div class="section-heading compact reveal">
-          <p class="eyebrow">Tổng kết</p>
-          <h2 id="reflection-title">Điều em rút ra từ dự án</h2>
-        </div>
-        <div class="reflection-grid reveal">
-          <article>
-            <h3>Tổ chức tri thức</h3>
-            <p>Biết gom các sản phẩm rời rạc thành một hệ thống dễ tìm, dễ đọc và có giá trị lưu trữ lâu dài.</p>
-          </article>
-          <article>
-            <h3>Kỹ năng số</h3>
-            <p>Vận dụng web tĩnh, đường dẫn tài liệu, trình xem PDF và bố cục responsive để chia sẻ sản phẩm học tập.</p>
-          </article>
-          <article>
-            <h3>Trách nhiệm học thuật</h3>
-            <p>Nhận thức rõ việc dùng AI cần đi kèm kiểm chứng, minh bạch, bảo vệ dữ liệu và trách nhiệm cá nhân.</p>
-          </article>
+      <section class="section summary" id="summary">
+        <div class="summary-card reveal">
+          <p class="kicker">05 / Tổng kết</p>
+          <h2>Portfolio là minh chứng cho sự sẵn sàng thích nghi trong môi trường số.</h2>
+          <p>
+            Quá trình xây dựng dự án giúp em rèn luyện khả năng khai thác dữ liệu chính thống,
+            ứng dụng AI, quản trị cộng tác trực tuyến và duy trì liêm chính học thuật.
+          </p>
+          <blockquote>
+            Công nghệ không chỉ là công cụ hỗ trợ, mà còn là người cộng sự giúp tối ưu hóa tư duy
+            và sáng tạo khi người học biết sử dụng có kiểm soát.
+          </blockquote>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <p>Trương Bảo Kiên | 25020207 | K70I-IT4</p>
-      <a href="#top">Lên đầu trang</a>
+    <footer class="footer">
+      <p>Trương Bảo Kiên / 25020207 / K70I-IT4</p>
+      <a href="mailto:25020207@vnu.edu.vn">25020207@vnu.edu.vn</a>
     </footer>
 
     <script src="script.js"></script>

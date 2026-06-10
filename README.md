@@ -6,7 +6,7 @@ Website tĩnh của Trương Bảo Kiên, MSSV 25020207, lớp K70I-IT4.
 
 - `index.html`: nội dung portfolio.
 - `styles.css`: giao diện responsive.
-- `script.js`: danh sách báo cáo PDF và trình xem trực tuyến.
+- `script.js`: dữ liệu portfolio, workflow từng bài, đổi theme sáng/tối và trình xem PDF.
 - `assets/`: ảnh cá nhân, infographic và các file PDF báo cáo.
 
 ## Deploy GitHub Pages
