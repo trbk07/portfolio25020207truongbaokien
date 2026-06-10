@@ -23,6 +23,7 @@
       <nav class="nav" aria-label="Điều hướng">
         <a href="#about">Giới thiệu</a>
         <a href="#projects">Dự án</a>
+        <a href="#requirements">Yêu cầu</a>
         <a href="#skills">Kỹ năng</a>
         <a href="#reports">Báo cáo</a>
         <a href="#summary">Tổng kết</a>
@@ -131,9 +132,33 @@
         <div id="projectList" class="project-list"></div>
       </section>
 
+      <section class="section requirements" id="requirements">
+        <div class="section-title reveal">
+          <p class="kicker">03 / Đáp ứng yêu cầu sản phẩm</p>
+          <h2>Portfolio được tổ chức đúng các phần yêu cầu của dự án.</h2>
+        </div>
+        <div class="requirement-grid reveal">
+          <article>
+            <span>1</span>
+            <h3>Trang Giới thiệu</h3>
+            <p>Thông tin cá nhân, ngành học, lớp, mã sinh viên, sở thích, mục tiêu học tập và cam kết sử dụng AI minh bạch.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Trang Dự án</h3>
+            <p>6 bài tập được trình bày bằng card gọn; bấm vào xem chi tiết mục tiêu, quy trình, ảnh minh chứng, sản phẩm và PDF.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Trang Tổng kết</h3>
+            <p>Nêu trải nghiệm cá nhân, kỹ năng quan trọng đã học, điểm tâm đắc, thách thức và định hướng sau học phần.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="section skills" id="skills">
         <div class="section-title reveal">
-          <p class="kicker">03 / Năng lực đạt được</p>
+          <p class="kicker">04 / Năng lực đạt được</p>
           <h2>Kỹ năng số quan trọng sau học phần.</h2>
         </div>
         <div class="skill-grid reveal">
@@ -146,7 +171,7 @@
 
       <section class="section reports" id="reports">
         <div class="section-title reveal">
-          <p class="kicker">04 / Tài liệu đọc thêm</p>
+          <p class="kicker">05 / Tài liệu đọc thêm</p>
           <h2>Báo cáo PDF và link Drive để đối chiếu chi tiết.</h2>
           <p class="section-note">
             Phần trình bày chính nằm ở các workflow phía trên. Khu vực này chỉ nhúng báo cáo để thầy cô
@@ -167,7 +192,7 @@
 
       <section class="section summary" id="summary">
         <div class="summary-card reveal">
-          <p class="kicker">05 / Tổng kết</p>
+          <p class="kicker">06 / Tổng kết</p>
           <h2>Portfolio là minh chứng cho sự sẵn sàng thích nghi trong môi trường số.</h2>
           <p>
             Quá trình xây dựng dự án giúp em rèn luyện khả năng khai thác dữ liệu chính thống,
@@ -180,6 +205,11 @@
         </div>
       </section>
     </main>
+
+    <dialog class="project-dialog" id="projectDialog">
+      <button class="dialog-close" type="button" aria-label="Đóng chi tiết">×</button>
+      <div id="dialogContent" class="dialog-content"></div>
+    </dialog>
 
     <footer class="footer">
       <p>Trương Bảo Kiên / 25020207 / K70I-IT4</p>

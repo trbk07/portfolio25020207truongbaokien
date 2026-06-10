@@ -2,7 +2,9 @@ const projects = [
   {
     id: "01",
     category: "digital",
-    title: "BT1 - Chương 1: Thao tác cơ bản với tệp tin và thư mục",
+    cover: "assets/evidence/bai-1/bai-1-evidence-02.jpeg",
+    tags: ["Kỹ năng số", "File Explorer", "Windows"],
+    title: "Bài tập 1 - Bài 1: Máy tính và các thiết bị ngoại vi",
     intro: "Rèn luyện kỹ năng tạo, đổi tên, sao chép, di chuyển, xóa tệp tin và thư mục trên Windows; đồng thời thiết kế cấu trúc thư mục logic để tổ chức tài liệu học tập.",
     objectives: [
       "Tạo được cấu trúc thư mục học tập rõ ràng, có phân cấp.",
@@ -10,11 +12,11 @@ const projects = [
       "Thực hiện thành thạo các thao tác dữ liệu cơ bản trên File Explorer."
     ],
     steps: [
-      ["Mở không gian làm việc", "Nhấn Windows + E hoặc mở biểu tượng thư mục trên thanh tác vụ để truy cập File Explorer."],
-      ["Chọn ổ đĩa thực hành", "Vào This PC và chọn ổ đĩa không phải ổ hệ thống, ví dụ ổ E:, để tạo khu vực thực hành riêng."],
-      ["Tạo và đổi tên tệp", "Tạo tệp văn bản .txt, đổi tên tệp theo nội dung và tạo thư mục con TaiLieu để phân loại dữ liệu."],
-      ["Sao chép và di chuyển", "Thực hiện Copy & Paste, Cut & Paste để đưa tệp giữa thư mục gốc và thư mục con bằng chuột phải hoặc phím tắt."],
-      ["Xóa và khôi phục", "Thực hành Delete, Shift + Delete và khôi phục dữ liệu từ Recycle Bin để hiểu khác biệt giữa xóa tạm thời và xóa vĩnh viễn."]
+      ["Mở không gian làm việc", "Nhấn Windows + E hoặc mở biểu tượng thư mục trên thanh tác vụ để truy cập File Explorer.", "assets/evidence/bai-1/bai-1-evidence-02.jpeg"],
+      ["Chọn ổ đĩa thực hành", "Vào This PC và chọn ổ đĩa không phải ổ hệ thống, ví dụ ổ E:, để tạo khu vực thực hành riêng.", "assets/evidence/bai-1/bai-1-evidence-04.jpeg"],
+      ["Tạo và đổi tên tệp", "Tạo tệp văn bản .txt, đổi tên tệp theo nội dung và tạo thư mục con TaiLieu để phân loại dữ liệu.", "assets/evidence/bai-1/bai-1-evidence-08.jpeg"],
+      ["Sao chép và di chuyển", "Thực hiện Copy & Paste, Cut & Paste để đưa tệp giữa thư mục gốc và thư mục con bằng chuột phải hoặc phím tắt.", "assets/evidence/bai-1/bai-1-evidence-11.jpeg"],
+      ["Xóa và khôi phục", "Thực hành Delete, Shift + Delete và khôi phục dữ liệu từ Recycle Bin để hiểu khác biệt giữa xóa tạm thời và xóa vĩnh viễn.", "assets/evidence/bai-1/bai-1-evidence-18.jpeg"]
     ],
     extras: [
       "Sản phẩm cuối cùng là báo cáo PDF ghi lại thao tác và ảnh minh chứng.",
@@ -26,7 +28,9 @@ const projects = [
   {
     id: "02",
     category: "digital",
-    title: "BT2 - Chương 2: Tìm kiếm và đánh giá thông tin học thuật",
+    cover: "assets/evidence-pages/bai-2/bai-2-page-02.jpg",
+    tags: ["Nghiên cứu", "Google Scholar", "Harvard"],
+    title: "Bài tập 2 - Bài 2: Khai thác dữ liệu và thông tin",
     intro: "Phát triển kỹ năng tìm kiếm nâng cao và tư duy đánh giá nguồn tin học thuật từ các nguồn đáng tin cậy.",
     objectives: [
       "Biết xác định chủ đề nghiên cứu liên quan đến ngành học.",
@@ -34,11 +38,11 @@ const projects = [
       "Đánh giá độ tin cậy của nguồn theo tác giả, đơn vị xuất bản, phương pháp và tính cập nhật."
     ],
     steps: [
-      ["Chọn chủ đề", "Xác định chủ đề nghiên cứu liên quan đến Công nghệ thông tin hoặc AI để giới hạn phạm vi tìm kiếm."],
-      ["Tìm kiếm nâng cao", "Sử dụng Google Scholar, thư viện và toán tử như site:, filetype: để lọc tài liệu phù hợp."],
-      ["Đánh giá nguồn tin", "Phân tích tác giả, cơ quan xuất bản, phương pháp nghiên cứu, trích dẫn và thời điểm công bố."],
-      ["Tổng hợp dữ liệu", "Lập bảng so sánh, xếp hạng độ tin cậy của các nguồn và chọn thông tin có giá trị."],
-      ["Hoàn thiện báo cáo", "Viết báo cáo kèm danh mục tài liệu tham khảo theo định dạng Harvard."]
+      ["Chọn chủ đề", "Xác định chủ đề nghiên cứu liên quan đến Công nghệ thông tin hoặc AI để giới hạn phạm vi tìm kiếm.", "assets/evidence-pages/bai-2/bai-2-page-01.jpg"],
+      ["Tìm kiếm nâng cao", "Sử dụng Google Scholar, thư viện và toán tử như site:, filetype: để lọc tài liệu phù hợp.", "assets/evidence-pages/bai-2/bai-2-page-02.jpg"],
+      ["Đánh giá nguồn tin", "Phân tích tác giả, cơ quan xuất bản, phương pháp nghiên cứu, trích dẫn và thời điểm công bố.", "assets/evidence-pages/bai-2/bai-2-page-03.jpg"],
+      ["Tổng hợp dữ liệu", "Lập bảng so sánh, xếp hạng độ tin cậy của các nguồn và chọn thông tin có giá trị.", "assets/evidence-pages/bai-2/bai-2-page-05.jpg"],
+      ["Hoàn thiện báo cáo", "Viết báo cáo kèm danh mục tài liệu tham khảo theo định dạng Harvard.", "assets/evidence-pages/bai-2/bai-2-page-08.jpg"]
     ],
     extras: [
       "Tìm kiếm thông thường nhanh và đa dạng nhưng độ tin cậy không đồng nhất.",
@@ -51,7 +55,9 @@ const projects = [
   {
     id: "03",
     category: "ai",
-    title: "BT2 - Chương 3: Tổng quan về Trí tuệ nhân tạo và Prompt hiệu quả",
+    cover: "assets/evidence/bai-3/bai-3-evidence-01.jpeg",
+    tags: ["AI", "Prompt", "Chain-of-Thought"],
+    title: "Bài tập 2 - Bài 3: Tổng quan về trí tuệ nhân tạo",
     intro: "Tập trung vào kỹ năng viết prompt để tận dụng mô hình ngôn ngữ lớn trong học tập, bao gồm Role Prompting, Chain-of-Thought và Few-shot examples.",
     objectives: [
       "Thiết kế prompt rõ vai trò, bối cảnh, yêu cầu và định dạng đầu ra.",
@@ -59,11 +65,11 @@ const projects = [
       "Đúc kết nguyên tắc viết prompt hiệu quả cho học tập."
     ],
     steps: [
-      ["Chọn tác vụ học tập", "Chọn 3 tác vụ phổ biến như tóm tắt tài liệu, giải thích khái niệm phức tạp hoặc tạo bộ câu hỏi ôn tập."],
-      ["Thiết kế 3 phiên bản prompt", "Với mỗi tác vụ, viết prompt ở nhiều mức: cơ bản, cải tiến và nâng cao."],
-      ["Thử nghiệm bằng AI", "Chạy các prompt trên ChatGPT hoặc Gemini để thu kết quả đầu ra."],
-      ["So sánh kết quả", "Đánh giá sự khác nhau về độ chính xác, cấu trúc, tính dễ hiểu và mức độ phù hợp."],
-      ["Tổng hợp mẹo sử dụng", "Rút ra các mẹo như yêu cầu AI giải thích bằng ví dụ đời sống hoặc suy nghĩ từng bước khi xử lý bài kỹ thuật."]
+      ["Chọn tác vụ học tập", "Chọn 3 tác vụ phổ biến như tóm tắt tài liệu, giải thích khái niệm phức tạp hoặc tạo bộ câu hỏi ôn tập.", "assets/evidence/bai-3/bai-3-evidence-01.jpeg"],
+      ["Thiết kế 3 phiên bản prompt", "Với mỗi tác vụ, viết prompt ở nhiều mức: cơ bản, cải tiến và nâng cao.", "assets/evidence/bai-3/bai-3-evidence-02.jpeg"],
+      ["Thử nghiệm bằng AI", "Chạy các prompt trên ChatGPT hoặc Gemini để thu kết quả đầu ra.", "assets/evidence-pages/bai-3/bai-3-page-04.jpg"],
+      ["So sánh kết quả", "Đánh giá sự khác nhau về độ chính xác, cấu trúc, tính dễ hiểu và mức độ phù hợp.", "assets/evidence/bai-3/bai-3-evidence-03.jpeg"],
+      ["Tổng hợp mẹo sử dụng", "Rút ra các mẹo như yêu cầu AI giải thích bằng ví dụ đời sống hoặc suy nghĩ từng bước khi xử lý bài kỹ thuật.", "assets/evidence-pages/bai-3/bai-3-page-08.jpg"]
     ],
     extras: [
       "Khi giải thích khái niệm khó như mômen quán tính, nên yêu cầu AI dùng phép ẩn dụ và ví dụ thực tế.",
@@ -75,7 +81,9 @@ const projects = [
   {
     id: "04",
     category: "collab",
-    title: "BT3 - Chương 4: Giao tiếp và hợp tác trong môi trường số",
+    cover: "assets/evidence/bai-4/bai-4-evidence-01.png",
+    tags: ["Cộng tác", "Trello", "Zalo"],
+    title: "Bài tập 3 - Bài 4: Giao tiếp và hợp tác trong môi trường số",
     intro: "Thực hành quản lý dự án nhóm trực tuyến qua bộ công cụ cộng tác, với bối cảnh bài thuyết trình chủ đề AI trong giáo dục.",
     objectives: [
       "Thành thạo công cụ hợp tác trực tuyến để quản lý dự án nhóm.",
@@ -83,11 +91,11 @@ const projects = [
       "Đánh giá ưu nhược điểm của từng công cụ trong quy trình làm việc nhóm."
     ],
     steps: [
-      ["Xác định bối cảnh dự án", "Nhóm thực hiện bài thuyết trình về AI trong giáo dục, gồm khái niệm, lợi ích, hạn chế và ví dụ ứng dụng."],
-      ["Chọn bộ công cụ", "Kết hợp công cụ quản lý nhiệm vụ, soạn thảo tài liệu, lưu trữ và giao tiếp như Trello, Google Docs, Google Drive, Zalo."],
-      ["Trao đổi công việc", "Dùng Zalo để nhắn tin nhanh, gửi link tài liệu và thống nhất phần việc với thành viên hỗ trợ."],
-      ["Quản lý tài liệu", "Tổ chức thư mục, tài liệu thuyết trình và các minh chứng làm việc nhóm trong không gian lưu trữ chung."],
-      ["Đánh giá hiệu quả", "Rút ra vai trò riêng của từng công cụ: quản lý nhiệm vụ, soạn thảo cộng tác, lưu trữ và trao đổi nhanh."]
+      ["Xác định bối cảnh dự án", "Nhóm thực hiện bài thuyết trình về AI trong giáo dục, gồm khái niệm, lợi ích, hạn chế và ví dụ ứng dụng.", "assets/evidence/bai-4/bai-4-evidence-03.jpeg"],
+      ["Chọn bộ công cụ", "Kết hợp công cụ quản lý nhiệm vụ, soạn thảo tài liệu, lưu trữ và giao tiếp như Trello, Google Docs, Google Drive, Zalo.", "assets/evidence/bai-4/bai-4-evidence-01.png"],
+      ["Trao đổi công việc", "Dùng Zalo để nhắn tin nhanh, gửi link tài liệu và thống nhất phần việc với thành viên hỗ trợ.", "assets/evidence/bai-4/bai-4-evidence-05.png"],
+      ["Quản lý tài liệu", "Tổ chức thư mục, tài liệu thuyết trình và các minh chứng làm việc nhóm trong không gian lưu trữ chung.", "assets/evidence/bai-4/bai-4-evidence-06.png"],
+      ["Đánh giá hiệu quả", "Rút ra vai trò riêng của từng công cụ: quản lý nhiệm vụ, soạn thảo cộng tác, lưu trữ và trao đổi nhanh.", "assets/evidence/bai-4/bai-4-evidence-07.png"]
     ],
     extras: [
       "Bài tập giúp rèn kỹ năng quản lý công việc cá nhân, sắp xếp tài liệu và phối hợp trong môi trường số.",
@@ -99,7 +107,9 @@ const projects = [
   {
     id: "05",
     category: "ai",
-    title: "BT2 - Chương 5: Sáng tạo nội dung số",
+    cover: "assets/evidence/bai-5/bai-5-evidence-01.jpeg",
+    tags: ["AI tạo sinh", "Canva", "Nội dung số"],
+    title: "Bài tập 2 - Bài 5: Sáng tạo nội dung số",
     intro: "Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung số, kết hợp công cụ tạo văn bản, tạo hình ảnh và hỗ trợ thiết kế.",
     objectives: [
       "Thành thạo việc dùng công cụ AI tạo sinh trong sáng tạo nội dung.",
@@ -107,11 +117,11 @@ const projects = [
       "Phát triển kỹ năng sáng tạo và phân tích khi làm việc với AI."
     ],
     steps: [
-      ["Chọn dự án sáng tạo", "Xác định loại sản phẩm như bài thuyết trình, infographic, bài viết chuyên sâu hoặc video ngắn."],
-      ["Chọn bộ công cụ AI", "Kết hợp ChatGPT/Gemini cho văn bản, công cụ tạo ảnh như DALL-E/Midjourney và công cụ thiết kế như Canva AI/CapCut."],
-      ["Tạo và chỉnh sửa nội dung", "Dùng AI để lấy nguyên liệu ban đầu, sau đó chọn lọc, chỉnh sửa hình ảnh, câu chữ và bố cục."],
-      ["Phân tích tư duy sử dụng AI", "Đánh giá vai trò của con người trong việc kiểm soát chất lượng, tránh phụ thuộc và giữ dấu ấn cá nhân."],
-      ["Hoàn thiện báo cáo", "Tổng hợp quy trình, sản phẩm cuối cùng và bài học rút ra về Prompt Engineering."]
+      ["Chọn dự án sáng tạo", "Xác định loại sản phẩm như bài thuyết trình, infographic, bài viết chuyên sâu hoặc video ngắn.", "assets/evidence/bai-5/bai-5-evidence-01.jpeg"],
+      ["Chọn bộ công cụ AI", "Kết hợp ChatGPT/Gemini cho văn bản, công cụ tạo ảnh như DALL-E/Midjourney và công cụ thiết kế như Canva AI/CapCut.", "assets/evidence/bai-5/bai-5-evidence-02.jpeg"],
+      ["Tạo và chỉnh sửa nội dung", "Dùng AI để lấy nguyên liệu ban đầu, sau đó chọn lọc, chỉnh sửa hình ảnh, câu chữ và bố cục.", "assets/evidence/bai-5/bai-5-evidence-03.jpeg"],
+      ["Phân tích tư duy sử dụng AI", "Đánh giá vai trò của con người trong việc kiểm soát chất lượng, tránh phụ thuộc và giữ dấu ấn cá nhân.", "assets/evidence/bai-5/bai-5-evidence-05.jpeg"],
+      ["Hoàn thiện báo cáo", "Tổng hợp quy trình, sản phẩm cuối cùng và bài học rút ra về Prompt Engineering.", "assets/evidence/bai-5/bai-5-evidence-06.jpeg"]
     ],
     extras: [
       "Quy trình chuyển từ làm việc tuần tự sang làm việc song song: AI cung cấp nguyên liệu, con người biên tập và quyết định chất lượng.",
@@ -123,7 +133,9 @@ const projects = [
   {
     id: "06",
     category: "ethics",
-    title: "BT4 - Chương 6: An toàn và liêm chính học thuật trong môi trường số",
+    cover: "assets/infographic-trust-ai.jpg",
+    tags: ["Liêm chính", "AI Ethics", "Privacy"],
+    title: "Bài tập 4 - Bài 6: An toàn và liêm chính học thuật trong môi trường số",
     intro: "Xây dựng kỹ năng sử dụng AI có trách nhiệm, đạo đức và minh bạch trong học tập, nghiên cứu.",
     objectives: [
       "Nhận thức ranh giới giữa AI hỗ trợ hợp lý và gian lận học thuật.",
@@ -131,11 +143,11 @@ const projects = [
       "Thực hành công bố, ghi nhận sự hỗ trợ của AI và kiểm chứng thông tin."
     ],
     steps: [
-      ["Nghiên cứu chính sách", "Tìm hiểu quy định của trường đại học và các khuyến nghị về sử dụng AI trong học thuật."],
-      ["Phân tích đạo đức", "Xác định ranh giới giữa hỗ trợ và gian lận, xem xét sở hữu trí tuệ, trích dẫn và tác động đến tự học."],
-      ["Thực hiện nhiệm vụ với AI", "Chọn một tác vụ cụ thể, ghi lại prompt và kết quả đầu ra tương ứng."],
-      ["Đánh giá và chỉnh sửa", "Mô tả cách kiểm tra, chỉnh sửa và tích hợp nội dung AI vào sản phẩm cuối cùng."],
-      ["Xây dựng nguyên tắc cá nhân", "Thiết lập 5-7 nguyên tắc sử dụng AI có trách nhiệm, có minh bạch và kiểm chứng."]
+      ["Nghiên cứu chính sách", "Tìm hiểu quy định của trường đại học và các khuyến nghị về sử dụng AI trong học thuật.", "assets/evidence-pages/bai-6/bai-6-page-01.jpg"],
+      ["Phân tích đạo đức", "Xác định ranh giới giữa hỗ trợ và gian lận, xem xét sở hữu trí tuệ, trích dẫn và tác động đến tự học.", "assets/evidence-pages/bai-6/bai-6-page-02.jpg"],
+      ["Thực hiện nhiệm vụ với AI", "Chọn một tác vụ cụ thể, ghi lại prompt và kết quả đầu ra tương ứng.", "assets/evidence-pages/bai-6/bai-6-page-03.jpg"],
+      ["Đánh giá và chỉnh sửa", "Mô tả cách kiểm tra, chỉnh sửa và tích hợp nội dung AI vào sản phẩm cuối cùng.", "assets/evidence-pages/bai-6/bai-6-page-04.jpg"],
+      ["Xây dựng nguyên tắc cá nhân", "Thiết lập 5-7 nguyên tắc sử dụng AI có trách nhiệm, có minh bạch và kiểm chứng.", "assets/infographic-trust-ai.jpg"]
     ],
     extras: [
       "Sản phẩm gồm báo cáo chi tiết và infographic về sử dụng AI có trách nhiệm.",
@@ -156,49 +168,91 @@ function reportUrl(path) {
 
 function renderProjects() {
   $("#projectList").innerHTML = projects.map((project) => `
-    <article class="project-panel reveal" data-category="${project.category}">
-      <div class="project-head">
-        <div class="project-number">${project.id}</div>
-        <div>
-          <h3>${project.title}</h3>
-          <p class="project-intro">${project.intro}</p>
-        </div>
-      </div>
-      <div class="project-body">
-        <div>
-          <p class="kicker">Mục tiêu</p>
-          <ul class="objective-list">
-            ${project.objectives.map((item) => `<li>${item}</li>`).join("")}
-          </ul>
-        </div>
-        <div>
-          <p class="kicker">Các bước thực hiện</p>
-          <div class="workflow">
-            ${project.steps.map((step, index) => `
-              <div class="step-card">
-                <span class="step-badge">${index + 1}</span>
-                <div>
-                  <h4>${step[0]}</h4>
-                  <p>${step[1]}</p>
-                </div>
-              </div>
-            `).join("")}
-          </div>
-        </div>
-        <div>
-          <p class="kicker">Điểm rút ra</p>
-          <ul class="project-extra">
-            ${project.extras.map((item) => `<li>${item}</li>`).join("")}
-          </ul>
-        </div>
-        <div class="project-links">
-          <a class="drive-link" href="${project.drive}" target="_blank" rel="noopener">Sản phẩm trên Drive</a>
-          ${project.extraDrive ? `<a class="drive-link" href="${project.extraDrive}" target="_blank" rel="noopener">Infographic Drive</a>` : ""}
-          <a class="report-link" href="${project.pdf}" target="_blank" rel="noopener">PDF đọc thêm</a>
-        </div>
+    <article class="project-card reveal" data-category="${project.category}">
+      <button class="project-open" type="button" data-project="${project.id}" aria-label="Xem chi tiết ${project.title}">
+        <img src="${project.cover}" alt="Minh chứng ${project.title}" loading="lazy">
+        <span class="project-pill">Dự án / ${project.id}</span>
+        <span class="arrow-pill">↗</span>
+      </button>
+      <div class="project-card-body">
+        <div class="tag-row">${project.tags.map((tag) => `<span>${tag}</span>`).join("")}</div>
+        <h3>${project.title}</h3>
+        <p>${project.intro}</p>
+        <button class="detail-link" type="button" data-project="${project.id}">Xem chi tiết quy trình</button>
       </div>
     </article>
   `).join("");
+
+  $$(".project-open, .detail-link").forEach((button) => {
+    button.addEventListener("click", () => openProject(button.dataset.project));
+  });
+}
+
+function openProject(id) {
+  const project = projects.find((item) => item.id === id);
+  if (!project) return;
+
+  $("#dialogContent").innerHTML = `
+    <div class="dialog-hero">
+      <img src="${project.cover}" alt="Ảnh minh chứng ${project.title}">
+      <div>
+        <p class="kicker">Dự án / ${project.id}</p>
+        <h2>${project.title}</h2>
+        <p>${project.intro}</p>
+        <div class="tag-row">${project.tags.map((tag) => `<span>${tag}</span>`).join("")}</div>
+      </div>
+    </div>
+
+    <section class="dialog-section">
+      <p class="kicker">Mục tiêu bài tập</p>
+      <ul class="objective-list">
+        ${project.objectives.map((item) => `<li>${item}</li>`).join("")}
+      </ul>
+    </section>
+
+    <section class="dialog-section">
+      <p class="kicker">Các bước thực hiện và minh chứng</p>
+      <div class="workflow">
+        ${project.steps.map((step, index) => `
+          <article class="step-card">
+            <span class="step-badge">${index + 1}</span>
+            <div>
+              <h4>${step[0]}</h4>
+              <p>${step[1]}</p>
+              ${step[2] ? `
+                <figure class="evidence-figure">
+                  <img src="${step[2]}" alt="Minh chứng bước ${index + 1} - ${step[0]}" loading="lazy">
+                  <figcaption>Minh chứng bước ${index + 1} từ báo cáo</figcaption>
+                </figure>
+              ` : ""}
+            </div>
+          </article>
+        `).join("")}
+      </div>
+    </section>
+
+    <section class="dialog-section">
+      <p class="kicker">Điểm rút ra</p>
+      <ul class="project-extra">
+        ${project.extras.map((item) => `<li>${item}</li>`).join("")}
+      </ul>
+    </section>
+
+    <section class="dialog-section">
+      <p class="kicker">Sản phẩm cuối cùng</p>
+      <div class="project-links">
+        <a class="drive-link" href="${project.drive}" target="_blank" rel="noopener">Mở sản phẩm trên Drive</a>
+        ${project.extraDrive ? `<a class="drive-link" href="${project.extraDrive}" target="_blank" rel="noopener">Mở infographic Drive</a>` : ""}
+        <a class="report-link" href="${project.pdf}" target="_blank" rel="noopener">Mở PDF báo cáo</a>
+      </div>
+    </section>
+  `;
+
+  $("#projectDialog").showModal();
+}
+
+function closeProjectDialog() {
+  $("#projectDialog").close();
 }
 
 function selectReport(index) {
@@ -216,7 +270,7 @@ function selectReport(index) {
 function renderReports() {
   $("#reportList").innerHTML = projects.map((project, index) => `
     <button class="report-button" type="button" data-report="${index}">
-      <strong>${project.id}. ${project.title.replace(/^BT\d?\s?-\s?/, "")}</strong>
+      <strong>${project.id}. ${project.title}</strong>
       <code>${reportUrl(project.pdf)}</code>
     </button>
   `).join("");
@@ -233,11 +287,18 @@ function initFilters() {
     filter.addEventListener("click", () => {
       const category = filter.dataset.filter;
       $$(".filter").forEach((button) => button.classList.toggle("active", button === filter));
-      $$(".project-panel").forEach((panel) => {
+      $$(".project-card").forEach((panel) => {
         const visible = category === "all" || panel.dataset.category === category;
         panel.classList.toggle("hidden", !visible);
       });
     });
+  });
+}
+
+function initDialog() {
+  $(".dialog-close").addEventListener("click", closeProjectDialog);
+  $("#projectDialog").addEventListener("click", (event) => {
+    if (event.target.id === "projectDialog") closeProjectDialog();
   });
 }
 
@@ -369,6 +430,7 @@ function initCanvas() {
 renderProjects();
 renderReports();
 initFilters();
+initDialog();
 initTheme();
 initReveal();
 initProgress();
