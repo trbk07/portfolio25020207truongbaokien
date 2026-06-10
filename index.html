@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <canvas id="motionCanvas" aria-hidden="true"></canvas>
+    <div class="progress" aria-hidden="true"></div>
     <header class="site-header" id="top">
       <a class="brand" href="#top" aria-label="Về đầu trang">
         <span class="brand-mark">BK</span>
@@ -19,6 +21,7 @@
       <nav class="nav" aria-label="Điều hướng chính">
         <a href="#about">Giới thiệu</a>
         <a href="#projects">Bài tập</a>
+        <a href="#evidence">Kỹ năng</a>
         <a href="#viewer">Báo cáo</a>
         <a href="#reflection">Tổng kết</a>
       </nav>
@@ -31,7 +34,7 @@
           <div class="signal signal-one"></div>
           <div class="signal signal-two"></div>
         </div>
-        <div class="hero-content">
+        <div class="hero-content reveal">
           <p class="eyebrow">VNU1001_E252015 | Nhập môn CNS & AI</p>
           <h1 id="hero-title">Trương Bảo Kiên</h1>
           <p class="hero-lead">
@@ -43,7 +46,7 @@
             <a class="button ghost" href="#viewer">Mở báo cáo PDF</a>
           </div>
         </div>
-        <aside class="profile-panel" aria-label="Thông tin sinh viên">
+        <aside class="profile-panel reveal" data-tilt aria-label="Thông tin sinh viên">
           <img src="assets/profile-truong-bao-kien.jpg" alt="Ảnh chân dung Trương Bảo Kiên">
           <div class="profile-card">
             <p class="profile-name">Trương Bảo Kiên</p>
@@ -64,11 +67,11 @@
       </section>
 
       <section class="section about-section" id="about" aria-labelledby="about-title">
-        <div class="section-heading">
+        <div class="section-heading reveal">
           <p class="eyebrow">Giới thiệu</p>
           <h2 id="about-title">Một hồ sơ học tập số gọn, rõ và có cá tính.</h2>
         </div>
-        <div class="about-grid">
+        <div class="about-grid reveal">
           <article class="about-copy">
             <h3>Mục tiêu portfolio</h3>
             <p>
@@ -98,11 +101,11 @@
       </section>
 
       <section class="section trust-section" aria-labelledby="trust-title">
-        <div class="section-heading compact">
+        <div class="section-heading compact reveal">
           <p class="eyebrow">AI có trách nhiệm</p>
           <h2 id="trust-title">Nguyên tắc T.R.U.S.T.E trong học tập</h2>
         </div>
-        <div class="trust-layout">
+        <div class="trust-layout reveal">
           <img src="assets/infographic-trust-ai.jpg" alt="Infographic sử dụng AI có trách nhiệm trong học tập">
           <div class="trust-copy">
             <p>
@@ -116,61 +119,146 @@
       </section>
 
       <section class="section projects-section" id="projects" aria-labelledby="projects-title">
-        <div class="section-heading">
+        <div class="section-heading reveal">
           <p class="eyebrow">Dự án môn học</p>
           <h2 id="projects-title">Các bài tập đã hoàn thành</h2>
         </div>
-        <div class="project-grid">
-          <article class="project-card">
+        <div class="filters reveal" aria-label="Lọc bài tập theo nhóm kỹ năng">
+          <button class="filter is-active" type="button" data-filter="all">Tất cả</button>
+          <button class="filter" type="button" data-filter="digital">Kỹ năng số</button>
+          <button class="filter" type="button" data-filter="ai">AI</button>
+          <button class="filter" type="button" data-filter="collab">Cộng tác</button>
+        </div>
+        <div class="project-grid detailed-projects">
+          <article class="project-card reveal" data-category="digital" data-tilt>
             <span class="project-index">01</span>
             <h3>Máy tính và thiết bị ngoại vi</h3>
-            <p>Hệ thống hóa kiến thức về cấu trúc máy tính, thiết bị vào ra và vai trò của phần cứng trong môi trường số.</p>
-            <a href="assets/reports/bai-1-may-tinh-thiet-bi-ngoai-vi.pdf" target="_blank" rel="noopener">Xem báo cáo</a>
+            <p class="project-goal">Mục tiêu: nhận diện các thành phần cơ bản của máy tính và hiểu vai trò của thiết bị ngoại vi trong quá trình học tập, làm việc số.</p>
+            <ol class="process-list">
+              <li>Tìm hiểu các nhóm phần cứng chính như bộ xử lý, bộ nhớ, lưu trữ, thiết bị nhập và thiết bị xuất.</li>
+              <li>Phân loại thiết bị ngoại vi theo chức năng: nhập dữ liệu, hiển thị kết quả, lưu trữ và kết nối.</li>
+              <li>So sánh vai trò của từng thiết bị trong một tình huống học tập cụ thể.</li>
+              <li>Tổng hợp nội dung thành báo cáo, kèm nhận xét về cách chọn thiết bị phù hợp với nhu cầu cá nhân.</li>
+            </ol>
+            <p class="project-result">Kết quả: nắm được cấu trúc cơ bản của hệ thống máy tính và biết giải thích vì sao từng thiết bị cần thiết trong môi trường học tập số.</p>
           </article>
-          <article class="project-card">
+          <article class="project-card reveal" data-category="digital" data-tilt>
             <span class="project-index">02</span>
             <h3>Khai thác dữ liệu và thông tin</h3>
-            <p>Trình bày cách tìm kiếm, đánh giá nguồn tin và chuyển hóa dữ liệu thành thông tin học thuật đáng tin cậy.</p>
-            <a href="assets/reports/bai-2-khai-thac-du-lieu-thong-tin.pdf" target="_blank" rel="noopener">Xem báo cáo</a>
+            <p class="project-goal">Mục tiêu: biết tìm kiếm, chọn lọc và đánh giá thông tin trước khi sử dụng trong học tập hoặc nghiên cứu.</p>
+            <ol class="process-list">
+              <li>Xác định chủ đề cần tìm hiểu và chuyển thành các từ khóa tìm kiếm rõ ràng.</li>
+              <li>Tìm tài liệu từ nhiều nguồn như công cụ tìm kiếm, tài liệu học thuật và trang thông tin chính thống.</li>
+              <li>Đánh giá nguồn dựa trên tác giả, thời điểm công bố, độ liên quan và mức độ đáng tin cậy.</li>
+              <li>Tổng hợp thông tin theo ý chính, tránh sao chép máy móc và ghi nhận nguồn tham khảo.</li>
+            </ol>
+            <p class="project-result">Kết quả: hình thành quy trình biến dữ liệu rời rạc thành thông tin có chọn lọc, có căn cứ và dùng được trong bài học.</p>
           </article>
-          <article class="project-card">
+          <article class="project-card reveal" data-category="ai" data-tilt>
             <span class="project-index">03</span>
             <h3>Tổng quan về trí tuệ nhân tạo</h3>
-            <p>Tổng hợp khái niệm AI, khả năng ứng dụng và góc nhìn cá nhân về tác động của AI trong học tập.</p>
-            <a href="assets/reports/bai-3-tong-quan-tri-tue-nhan-tao.pdf" target="_blank" rel="noopener">Xem báo cáo</a>
+            <p class="project-goal">Mục tiêu: hiểu AI là gì, các ứng dụng phổ biến của AI và cách đặt yêu cầu để AI hỗ trợ học tập hiệu quả hơn.</p>
+            <ol class="process-list">
+              <li>Khái quát khái niệm trí tuệ nhân tạo, các dạng ứng dụng thường gặp và ví dụ trong đời sống.</li>
+              <li>Phân tích lợi ích, giới hạn và rủi ro khi dùng AI trong học tập.</li>
+              <li>Thử nghiệm cách đặt câu hỏi hoặc prompt có ngữ cảnh, yêu cầu và định dạng đầu ra rõ ràng.</li>
+              <li>Đối chiếu kết quả AI với hiểu biết cá nhân để điều chỉnh nội dung trước khi đưa vào báo cáo.</li>
+            </ol>
+            <p class="project-result">Kết quả: có cái nhìn cân bằng hơn về AI, biết dùng AI như công cụ hỗ trợ chứ không thay thế tư duy cá nhân.</p>
           </article>
-          <article class="project-card featured">
+          <article class="project-card featured reveal" data-category="collab" data-tilt>
             <span class="project-index">04</span>
             <h3>Công cụ hợp tác trực tuyến cho dự án nhóm</h3>
-            <p>Minh chứng việc sử dụng công cụ số để phân công, trao đổi, quản lý tiến độ và phối hợp trong môi trường trực tuyến.</p>
-            <a href="assets/reports/bai-4-cong-cu-hop-tac-truc-tuyen.pdf" target="_blank" rel="noopener">Xem báo cáo</a>
+            <p class="project-goal">Mục tiêu: vận dụng công cụ trực tuyến để tổ chức công việc nhóm, chia sẻ tài liệu và theo dõi tiến độ.</p>
+            <ol class="process-list">
+              <li>Xác định nhu cầu của nhóm: giao việc, lưu tài liệu, trao đổi nhanh và cập nhật trạng thái.</li>
+              <li>Sử dụng công cụ quản lý nhiệm vụ để chia đầu việc, gán người phụ trách và đặt mốc hoàn thành.</li>
+              <li>Tổ chức tài liệu nhóm trên nền tảng lưu trữ trực tuyến để mọi thành viên cùng truy cập.</li>
+              <li>Ghi lại minh chứng phối hợp và đánh giá ưu điểm, hạn chế của cách làm việc trực tuyến.</li>
+            </ol>
+            <p class="project-result">Kết quả: hiểu cách phối hợp nhóm có tổ chức hơn, giảm thất lạc tài liệu và minh bạch trách nhiệm của từng thành viên.</p>
           </article>
-          <article class="project-card">
+          <article class="project-card reveal" data-category="ai" data-tilt>
             <span class="project-index">05</span>
             <h3>AI tạo sinh hỗ trợ sáng tạo nội dung</h3>
-            <p>Thể hiện cách dùng AI để hỗ trợ lên ý tưởng, biên tập và hoàn thiện sản phẩm số có kiểm soát.</p>
-            <a href="assets/reports/bai-5-ai-tao-sinh-sang-tao-noi-dung.pdf" target="_blank" rel="noopener">Xem báo cáo</a>
+            <p class="project-goal">Mục tiêu: sử dụng AI tạo sinh để hỗ trợ lên ý tưởng, xây dựng nội dung và hoàn thiện sản phẩm truyền thông số.</p>
+            <ol class="process-list">
+              <li>Xác định chủ đề, đối tượng người xem và thông điệp chính của sản phẩm nội dung.</li>
+              <li>Dùng AI để gợi ý dàn ý, câu chữ, hình ảnh hoặc phương án trình bày ban đầu.</li>
+              <li>Chọn lọc kết quả phù hợp, chỉnh sửa lại bằng ngôn ngữ và góc nhìn cá nhân.</li>
+              <li>Hoàn thiện sản phẩm bằng công cụ thiết kế, kiểm tra tính nhất quán và tính học thuật của nội dung.</li>
+            </ol>
+            <p class="project-result">Kết quả: tạo được sản phẩm số có sự hỗ trợ của AI nhưng vẫn thể hiện vai trò biên tập, lựa chọn và chịu trách nhiệm của người học.</p>
           </article>
-          <article class="project-card">
+          <article class="project-card reveal" data-category="ai" data-tilt>
             <span class="project-index">06</span>
             <h3>Sử dụng AI có trách nhiệm</h3>
-            <p>Xây dựng nguyên tắc cá nhân về kiểm chứng, minh bạch, bảo mật và liêm chính học thuật khi dùng AI.</p>
-            <a href="assets/reports/bai-6-ai-co-trach-nhiem.pdf" target="_blank" rel="noopener">Xem báo cáo</a>
+            <p class="project-goal">Mục tiêu: xây dựng nguyên tắc cá nhân khi dùng AI để đảm bảo trung thực, minh bạch và an toàn dữ liệu.</p>
+            <ol class="process-list">
+              <li>Tìm hiểu các khuyến nghị về sử dụng AI trong học tập và nghiên cứu.</li>
+              <li>Ghi lại cách AI hỗ trợ trong một nhiệm vụ cụ thể, từ gợi ý ban đầu đến chỉnh sửa cuối cùng.</li>
+              <li>Phân tích các rủi ro như sao chép máy móc, thông tin sai, lộ dữ liệu cá nhân và phụ thuộc quá mức.</li>
+              <li>Xây dựng bộ nguyên tắc T.R.U.S.T.E: kiểm chứng, tư duy đi trước, trách nhiệm, công cụ hỗ trợ, minh bạch và đạo đức.</li>
+            </ol>
+            <p class="project-result">Kết quả: hình thành thói quen dùng AI có kiểm soát, biết khai báo khi cần và luôn chịu trách nhiệm với sản phẩm cuối cùng.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section evidence-section" id="evidence" aria-labelledby="evidence-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Minh chứng năng lực</p>
+          <h2 id="evidence-title">6 lĩnh vực kỹ năng được rèn luyện</h2>
+          <p class="section-note">
+            Mỗi bài tập đại diện cho một nhóm kỹ năng trọng tâm của học phần, từ thao tác dữ liệu
+            đến tư duy phản biện khi sử dụng AI.
+          </p>
+        </div>
+        <div class="skill-gallery reveal">
+          <article>
+            <span>01</span>
+            <h3>Quản lý dữ liệu</h3>
+            <p>Tổ chức tập tin, đặt tên tài liệu và lưu trữ sản phẩm học tập có hệ thống.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Tìm kiếm học thuật</h3>
+            <p>Xây dựng từ khóa, chọn nguồn phù hợp và đánh giá độ tin cậy của thông tin.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Tư duy về AI</h3>
+            <p>Nhận diện khả năng, giới hạn và tác động của trí tuệ nhân tạo trong học tập.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Cộng tác trực tuyến</h3>
+            <p>Phối hợp nhóm bằng công cụ số, chia sẻ tài liệu và quản lý tiến độ công việc.</p>
+          </article>
+          <article>
+            <span>05</span>
+            <h3>Sáng tạo nội dung</h3>
+            <p>Kết hợp AI tạo sinh với chỉnh sửa cá nhân để tạo sản phẩm số có dấu ấn riêng.</p>
+          </article>
+          <article>
+            <span>06</span>
+            <h3>Trách nhiệm học thuật</h3>
+            <p>Kiểm chứng, minh bạch, bảo vệ dữ liệu và không phụ thuộc máy móc vào AI.</p>
           </article>
         </div>
       </section>
 
       <section class="section viewer-section" id="viewer" aria-labelledby="viewer-title">
-        <div class="section-heading">
-          <p class="eyebrow">Xem trực tuyến</p>
-          <h2 id="viewer-title">Kho báo cáo PDF sau khi deploy</h2>
+        <div class="section-heading reveal">
+          <p class="eyebrow">Tài liệu đọc thêm</p>
+          <h2 id="viewer-title">Báo cáo chi tiết để thầy cô xem thêm</h2>
           <p class="section-note">
-            Các URL dưới đây tự đổi theo domain GitHub Pages của repo, nên khi website được publish,
-            thầy cô có thể mở trực tiếp từng báo cáo từ trang này.
+            Phần trên đã tóm tắt quy trình thực hiện từng bài. Các file PDF bên dưới chỉ dùng làm
+            minh chứng chi tiết, tài liệu đối chiếu và đọc thêm khi cần xem đầy đủ nội dung báo cáo.
           </p>
         </div>
 
-        <div class="viewer-layout">
+        <div class="viewer-layout reveal">
           <div class="report-list" id="reportList" aria-label="Danh sách báo cáo"></div>
           <div class="viewer-frame-wrap">
             <div class="viewer-toolbar">
@@ -183,11 +271,11 @@
       </section>
 
       <section class="section reflection-section" id="reflection" aria-labelledby="reflection-title">
-        <div class="section-heading compact">
+        <div class="section-heading compact reveal">
           <p class="eyebrow">Tổng kết</p>
           <h2 id="reflection-title">Điều em rút ra từ dự án</h2>
         </div>
-        <div class="reflection-grid">
+        <div class="reflection-grid reveal">
           <article>
             <h3>Tổ chức tri thức</h3>
             <p>Biết gom các sản phẩm rời rạc thành một hệ thống dễ tìm, dễ đọc và có giá trị lưu trữ lâu dài.</p>
