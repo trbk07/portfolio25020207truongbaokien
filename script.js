@@ -733,13 +733,51 @@ function bindDocumentNav() {
   const targets = [$("#dialogContent .document-cover"), ...$$(".document-section")].filter(Boolean);
   if (!dialog || !nav || !links.length || !targets.length) return;
 
+  let lockedActiveId = null;
+
   const targetTop = (target) => target.getBoundingClientRect().top - dialog.getBoundingClientRect().top + dialog.scrollTop;
-  const navOffset = () => window.matchMedia("(max-width: 900px)").matches ? 78 : 26;
+  const scrollMargin = () => {
+    if (window.matchMedia("(max-width: 900px)").matches) {
+      return nav.getBoundingClientRect().height + 12;
+    }
+
+    return 28;
+  };
+
+  const setActiveLink = (id) => {
+    links.forEach((link) => link.classList.toggle("active", link.getAttribute("href") === `#${id}`));
+  };
+
+  const prefersReducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const scrollTargetIntoView = (target, behavior = (prefersReducedMotion() ? "auto" : "smooth")) => {
+    target.scrollIntoView({
+      block: "start",
+      inline: "nearest",
+      behavior
+    });
+  };
+
+  const getCurrentTarget = () => {
+    const activationPoint = dialog.scrollTop + scrollMargin() + 2;
+
+    return targets.reduce((closest, target) => {
+      const distance = Math.abs(targetTop(target) - activationPoint);
+      return distance < closest.distance ? { target, distance } : closest;
+    }, { target: targets[0], distance: Infinity }).target;
+  };
 
   const setActive = () => {
-    const activationPoint = dialog.scrollTop + navOffset() + 12;
-    const current = [...targets].reverse().find((section) => targetTop(section) <= activationPoint) || targets[0];
-    links.forEach((link) => link.classList.toggle("active", link.getAttribute("href") === `#${current.id}`));
+    if (lockedActiveId) {
+      setActiveLink(lockedActiveId);
+      return;
+    }
+
+    setActiveLink(getCurrentTarget().id);
+  };
+
+  const unlockActive = () => {
+    lockedActiveId = null;
+    setActive();
   };
 
   links.forEach((link) => {
@@ -747,14 +785,50 @@ function bindDocumentNav() {
       const target = $(link.getAttribute("href"));
       if (!target) return;
       event.preventDefault();
-      dialog.scrollTo({
-        top: Math.max(targetTop(target) - navOffset(), 0),
-        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
-      });
+      lockedActiveId = target.id;
+      setActiveLink(target.id);
+
+      scrollTargetIntoView(target);
+
+      window.setTimeout(() => {
+        if (lockedActiveId === target.id) {
+          scrollTargetIntoView(target, prefersReducedMotion() ? "auto" : "smooth");
+        }
+      }, 760);
+
+      window.setTimeout(() => {
+        if (lockedActiveId === target.id) {
+          scrollTargetIntoView(target, prefersReducedMotion() ? "auto" : "smooth");
+        }
+      }, 1300);
     });
   });
 
+  const keepLockedTargetInView = () => {
+    if (!lockedActiveId) return;
+    const target = document.getElementById(lockedActiveId);
+    if (target) scrollTargetIntoView(target, prefersReducedMotion() ? "auto" : "smooth");
+  };
+
+  $$("#dialogContent img").forEach((image) => {
+    if (!image.complete) {
+      image.addEventListener("load", keepLockedTargetInView, { once: true });
+    }
+  });
+
   dialog.onscroll = setActive;
+  dialog.onwheel = unlockActive;
+  dialog.ontouchstart = unlockActive;
+  dialog.onpointerdown = (event) => {
+    if (!event.target.closest(".document-side-nav a")) {
+      unlockActive();
+    }
+  };
+  dialog.onkeydown = (event) => {
+    if (["ArrowDown", "ArrowUp", "PageDown", "PageUp", "Home", "End", " "].includes(event.key)) {
+      unlockActive();
+    }
+  };
   setActive();
 }
 
