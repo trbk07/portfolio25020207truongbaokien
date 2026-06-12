@@ -7,79 +7,98 @@
     <title>Trương Bảo Kiên | IT Digital Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <canvas id="networkCanvas" aria-hidden="true"></canvas>
-    <div class="scanline" aria-hidden="true"></div>
+    <div class="scanline noise" aria-hidden="true"></div>
     <div class="progress" aria-hidden="true"></div>
 
     <header class="topbar">
       <a class="brand" href="#home" aria-label="Về đầu trang">
-        <span class="brand-logo">TBK</span>
-        <span>Portfolio<span class="accent-dot">.</span>25020207</span>
+        <span class="brand-logo">K</span>
+        <span>Kiên<span class="accent-dot">.</span></span>
       </a>
       <nav class="nav" aria-label="Điều hướng">
-        <a href="#about">Giới thiệu</a>
-        <a href="#projects">Dự án</a>
-        <a href="#requirements">Yêu cầu</a>
-        <a href="#skills">Kỹ năng</a>
-        <a href="#reports">Báo cáo</a>
-        <a href="#summary">Tổng kết</a>
+        <a href="#about"><span>01</span>Giới thiệu</a>
+        <a href="#projects"><span>02</span>Dự án</a>
+        <a href="#summary"><span>03</span>Tổng kết</a>
       </nav>
       <button class="theme-toggle" type="button" aria-label="Đổi giao diện sáng tối" aria-pressed="false">
-        <span class="theme-icon" aria-hidden="true">◐</span>
-        <span class="theme-text">Light</span>
+        <span class="theme-icon" aria-hidden="true">☼</span>
+        <span class="theme-text">Dark</span>
       </button>
     </header>
 
     <main>
       <section class="hero section" id="home">
         <div class="hero-copy reveal">
-          <p class="kicker">VNU1001_E252015 / Digital Skills / Responsible AI</p>
-          <h1>Trương Bảo Kiên</h1>
+          <p class="kicker"><span class="status-dot"></span>Digital Portfolio / 2026</p>
+          <h1 class="hero-title">
+            <span>Học để hiểu.</span>
+            <span>Xây dựng để kiểm chứng.</span>
+            <span class="gradient-text">Sáng tạo để tạo giá trị thực.</span>
+          </h1>
           <p class="hero-lead">
-            Portfolio kỹ năng số ghi lại hành trình học tập qua 6 bài thực hành:
-            quản lý tệp tin, khai thác dữ liệu, prompt engineering, cộng tác trực tuyến,
-            sáng tạo nội dung số và liêm chính học thuật trong môi trường AI.
+            Xin chào, tôi là <strong>Trương Bảo Kiên</strong>, sinh viên Công nghệ thông tin.
+            Portfolio này ghi lại hành trình tôi rèn kỹ năng số qua 6 bài thực hành:
+            từ thao tác nền tảng, nghiên cứu học thuật đến sử dụng AI một cách minh bạch và có trách nhiệm.
           </p>
           <div class="hero-actions">
-            <a class="btn primary" href="#projects">Xem quy trình từng bài</a>
-            <a class="btn secondary" href="#reports">Báo cáo PDF đọc thêm</a>
+            <a class="btn primary" href="#projects">Khám phá 6 dự án <span>↘</span></a>
+            <a class="btn secondary" href="#about">Xem hành trình học ↗</a>
+            <button class="btn secondary" type="button" data-print-portfolio>Xuất PDF portfolio</button>
           </div>
         </div>
 
-        <aside class="terminal-card reveal" aria-label="Thông tin nhanh">
-          <div class="terminal-top">
-            <span></span><span></span><span></span>
-            <code>student.profile</code>
+        <aside class="hero-visual reveal" aria-label="Thông tin nhanh">
+          <div class="portrait-frame">
+            <img src="assets/site/site-image-01.jpg" alt="Ảnh chân dung Trương Bảo Kiên">
+            <span class="orbit-line orbit-one"></span>
+            <span class="orbit-line orbit-two"></span>
           </div>
-          <img src="assets/site/site-image-01.jpg" alt="Ảnh chân dung Trương Bảo Kiên">
-          <div class="terminal-lines">
-            <p><span>name</span> = "Trương Bảo Kiên"</p>
-            <p><span>major</span> = "Công nghệ thông tin"</p>
-            <p><span>class</span> = "K70I-IT4"</p>
-            <p><span>student_id</span> = "25020207"</p>
+          <div class="floating-code" aria-hidden="true">
+            <code>function buildIdeas() {</code>
+            <code>  const learn = true;</code>
+            <code>  while (learn) {</code>
+            <code>    think(); build(); test();</code>
+            <code>  }</code>
+            <code>  return impact();</code>
           </div>
+          <span class="skill-chip chip-code">&lt;/&gt;</span>
+          <span class="skill-chip chip-ai">AI<br><small>Ứng dụng có trách nhiệm</small></span>
+          <span class="skill-chip chip-brace">{ }</span>
         </aside>
+
+        <div class="hero-meta reveal">
+          <div><strong>CNTT</strong><span>Sinh viên</span></div>
+          <div><strong>06+</strong><span>Dự án thực hành</span></div>
+          <div><strong>02+</strong><span>Nghiên cứu học thuật</span></div>
+          <div><strong>AI</strong><span>Ứng dụng có trách nhiệm</span></div>
+        </div>
       </section>
 
       <section class="section about" id="about">
         <div class="section-title reveal">
-          <p class="kicker">01 / Giới thiệu</p>
-          <h2>Hồ sơ học tập số được dựng lại từ Google Site gốc.</h2>
+          <p class="kicker">01 / Về tôi</p>
+          <h2>Chủ động học.<br><span>Sáng tạo có trách nhiệm.</span></h2>
+          <p class="section-note">
+            Kỹ năng số với tôi không chỉ là biết dùng công cụ. Đó là cách đặt câu hỏi tốt,
+            tổ chức thông tin rõ ràng, cộng tác hiệu quả và chịu trách nhiệm với sản phẩm mình tạo ra.
+          </p>
         </div>
         <div class="about-grid">
           <article class="glass-panel reveal">
-            <h3>Lời mở đầu</h3>
+            <h3>Hành trình học tập</h3>
             <p>
-              Chào mừng bạn đến với Portfolio kỹ năng số của tôi. Đây là nơi lưu trữ và phản ánh
-              hành trình trải nghiệm, học tập thông qua chuỗi bài tập thực hành về công nghệ và trí tuệ nhân tạo.
+              Tôi là Trương Bảo Kiên, sinh viên ngành Công nghệ thông tin tại Trường Đại học Công nghệ -
+              Đại học Quốc Gia Hà Nội. Tôi quan tâm đến lập trình, công nghệ mới và cách AI có thể hỗ trợ
+              việc học khi được sử dụng đúng mục đích.
             </p>
             <p>
-              Dự án không chỉ đáp ứng yêu cầu môn học mà còn là minh chứng cho năng lực thích nghi
-              và làm chủ công nghệ trong kỷ nguyên số.
+              Portfolio này không chỉ lưu sản phẩm cuối cùng, mà còn cho thấy cách tôi tìm kiếm, thử nghiệm,
+              kiểm chứng và rút kinh nghiệm sau từng bài thực hành.
             </p>
           </article>
           <div class="fact-grid reveal">
@@ -91,116 +110,131 @@
             <div><span>Sở thích</span><strong>Đọc sách - Lập trình - Khám phá Công nghệ</strong></div>
           </div>
         </div>
-      </section>
-
-      <section class="section mission">
+        <div class="intro-details reveal">
+          <article>
+            <span>01</span>
+            <h3>Mục tiêu học tập</h3>
+            <p>
+              Phát triển kỹ năng số để ứng dụng vào ngành Công nghệ thông tin và làm chủ các công cụ AI.
+              Tôi hướng đến việc biết tìm kiếm, đánh giá thông tin, tổ chức dữ liệu, làm việc nhóm trực tuyến
+              và sử dụng AI như một công cụ hỗ trợ học tập có kiểm soát.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Định hướng phát triển cá nhân</h3>
+            <p>
+              Trong thời gian tới, tôi muốn tiếp tục rèn luyện nền tảng lập trình, kỹ năng tự học,
+              tư duy phản biện và khả năng ứng dụng AI vào các bài toán thực tế. Những kỹ năng này
+              là nền tảng để phát triển trong lĩnh vực Công nghệ thông tin.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Mục tiêu của Portfolio</h3>
+            <p>
+              Portfolio được xây dựng để thể hiện các kỹ năng số đã học, lưu trữ sản phẩm cá nhân,
+              giúp thầy cô dễ truy cập báo cáo, hình ảnh minh chứng và toàn bộ quá trình thực hiện
+              các bài tập trong học phần.
+            </p>
+          </article>
+        </div>
         <div class="mission-grid">
           <article class="mission-card reveal">
-            <span>portfolio.goal</span>
-            <h3>Hệ thống hóa toàn bộ bài tập thực hành</h3>
-            <p>Lưu giữ minh chứng cho quá trình rèn luyện kỹ năng từ quản lý tệp tin đến làm chủ các công cụ AI hiện đại.</p>
+            <span>⌁</span>
+            <h3>Tổ chức</h3>
+            <p>Biến thông tin rời rạc thành hệ thống rõ ràng, dễ tìm kiếm và dễ phát triển.</p>
           </article>
           <article class="mission-card reveal">
-            <span>learning.target</span>
-            <h3>Phát triển kỹ năng số cho ngành CNTT</h3>
-            <p>Ứng dụng công nghệ thông tin và AI vào học tập theo hướng chủ động, có kiểm chứng và có trách nhiệm.</p>
+            <span>◎</span>
+            <h3>Kiểm chứng</h3>
+            <p>Đối chiếu nguồn, đánh giá đầu ra và giữ tư duy phản biện khi làm việc với AI.</p>
           </article>
           <article class="mission-card reveal">
-            <span>integrity.mode</span>
-            <h3>Minh bạch khi sử dụng AI</h3>
-            <p>Mọi sự hỗ trợ từ AI được nhìn nhận như công cụ, đi cùng tư duy phản biện và liêm chính học thuật.</p>
+            <span>✦</span>
+            <h3>Sáng tạo</h3>
+            <p>Kết hợp công nghệ với góc nhìn cá nhân để tạo sản phẩm học tập có ích và có dấu ấn.</p>
           </article>
         </div>
       </section>
 
       <section class="section projects" id="projects">
         <div class="section-title reveal">
-          <p class="kicker">02 / Dự án học tập</p>
-          <h2>Quy trình thực hiện từng bài, trình bày trực tiếp trên web.</h2>
+          <p class="kicker">02 / Hành trình dự án</p>
+          <h2>Sáu chương.<br><span>Một hành trình trưởng thành.</span></h2>
           <p class="section-note">
-            Nội dung dưới đây được rút từ Google Site gốc: mỗi bài có mục tiêu, các bước làm,
-            điểm phân tích chính và sản phẩm cuối cùng. PDF chỉ nằm ở cuối trang để thầy cô đọc thêm.
+            Mỗi dự án là một lần tôi thử nghiệm, sửa sai và hiểu rõ hơn cách công nghệ thực sự tạo ra giá trị
+            trong học tập.
           </p>
         </div>
         <div class="filter-bar reveal" aria-label="Lọc dự án">
-          <button class="filter active" type="button" data-filter="all">Tất cả</button>
-          <button class="filter" type="button" data-filter="digital">Kỹ năng số</button>
-          <button class="filter" type="button" data-filter="ai">AI</button>
-          <button class="filter" type="button" data-filter="collab">Cộng tác</button>
-          <button class="filter" type="button" data-filter="ethics">Liêm chính</button>
+          <button class="filter active" type="button" data-filter="all">Tất cả <span>06</span></button>
+          <button class="filter" type="button" data-filter="digital">Kỹ năng số <span>03</span></button>
+          <button class="filter" type="button" data-filter="ai">AI <span>03</span></button>
+          <button class="filter" type="button" data-filter="research">Nghiên cứu <span>01</span></button>
+          <button class="filter" type="button" data-filter="collab">Cộng tác <span>01</span></button>
+          <button class="filter" type="button" data-filter="ethics">Liêm chính <span>01</span></button>
         </div>
         <div id="projectList" class="project-list"></div>
       </section>
 
-      <section class="section requirements" id="requirements">
-        <div class="section-title reveal">
-          <p class="kicker">03 / Đáp ứng yêu cầu sản phẩm</p>
-          <h2>Portfolio được tổ chức đúng các phần yêu cầu của dự án.</h2>
-        </div>
-        <div class="requirement-grid reveal">
-          <article>
-            <span>1</span>
-            <h3>Trang Giới thiệu</h3>
-            <p>Thông tin cá nhân, ngành học, lớp, mã sinh viên, sở thích, mục tiêu học tập và cam kết sử dụng AI minh bạch.</p>
-          </article>
-          <article>
-            <span>2</span>
-            <h3>Trang Dự án</h3>
-            <p>6 bài tập được trình bày bằng card gọn; bấm vào xem chi tiết mục tiêu, quy trình, ảnh minh chứng, sản phẩm và PDF.</p>
-          </article>
-          <article>
-            <span>3</span>
-            <h3>Trang Tổng kết</h3>
-            <p>Nêu trải nghiệm cá nhân, kỹ năng quan trọng đã học, điểm tâm đắc, thách thức và định hướng sau học phần.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section skills" id="skills">
-        <div class="section-title reveal">
-          <p class="kicker">04 / Năng lực đạt được</p>
-          <h2>Kỹ năng số quan trọng sau học phần.</h2>
-        </div>
-        <div class="skill-grid reveal">
-          <article><span>01</span><h3>Prompt Engineering</h3><p>Thiết kế prompt nâng cao để khai thác AI chính xác và có kiểm soát.</p></article>
-          <article><span>02</span><h3>Sáng tạo đa phương tiện</h3><p>Từ kịch bản, hình ảnh đến thiết kế sản phẩm truyền thông số với AI.</p></article>
-          <article><span>03</span><h3>Cộng tác trực tuyến</h3><p>Điều phối nhóm qua công cụ quản lý, tài liệu chung và kênh trao đổi nhanh.</p></article>
-          <article><span>04</span><h3>Đạo đức học thuật</h3><p>Kiểm chứng thông tin, bảo vệ dữ liệu và công bố minh bạch khi dùng AI.</p></article>
-        </div>
-      </section>
-
-      <section class="section reports" id="reports">
-        <div class="section-title reveal">
-          <p class="kicker">05 / Tài liệu đọc thêm</p>
-          <h2>Báo cáo PDF và link Drive để đối chiếu chi tiết.</h2>
-          <p class="section-note">
-            Phần trình bày chính nằm ở các workflow phía trên. Khu vực này chỉ nhúng báo cáo để thầy cô
-            mở đọc thêm, kiểm tra minh chứng và xem bản đầy đủ.
+      <section class="section ai-principles" aria-label="Nguyên tắc sử dụng AI có trách nhiệm">
+        <div class="ai-principles-copy reveal">
+          <p class="kicker">Nguyên tắc cá nhân</p>
+          <h2>AI là trợ lý.<br><span>Người học vẫn là người chịu trách nhiệm.</span></h2>
+          <p>
+            Bộ nguyên tắc 5K giúp tôi dùng AI để học sâu hơn: có khai báo, có kiểm chứng,
+            có bảo vệ dữ liệu và không đánh mất tư duy của chính mình.
           </p>
+          <button class="btn light" type="button" data-open-project="06">Xem bài 6 ↗</button>
         </div>
-        <div class="report-layout reveal">
-          <div id="reportList" class="report-list"></div>
-          <div class="pdf-panel">
-            <div class="pdf-toolbar">
-              <strong id="activeReportTitle">Báo cáo chi tiết</strong>
-              <a id="openReportLink" href="#" target="_blank" rel="noopener">Mở tab mới</a>
-            </div>
-            <iframe id="reportFrame" title="Báo cáo PDF đọc thêm"></iframe>
-          </div>
+        <div class="ai-principles-list reveal">
+          <div><span>01</span><strong>Không copy-paste</strong><small>AI chỉ là bản nháp đầu tiên.</small></div>
+          <div><span>02</span><strong>Kiểm chứng</strong><small>Đối chiếu dữ kiện trước khi dùng.</small></div>
+          <div><span>03</span><strong>Khai báo</strong><small>Minh bạch khi AI hỗ trợ.</small></div>
+          <div><span>04</span><strong>Không nhập dữ liệu nhạy cảm</strong><small>Giữ an toàn thông tin cá nhân.</small></div>
+          <div><span>05</span><strong>Không ngừng phản biện</strong><small>Con người giữ quyền quyết định.</small></div>
         </div>
       </section>
 
       <section class="section summary" id="summary">
         <div class="summary-card reveal">
-          <p class="kicker">06 / Tổng kết</p>
-          <h2>Portfolio là minh chứng cho sự sẵn sàng thích nghi trong môi trường số.</h2>
-          <p>
-            Quá trình xây dựng dự án giúp em rèn luyện khả năng khai thác dữ liệu chính thống,
-            ứng dụng AI, quản trị cộng tác trực tuyến và duy trì liêm chính học thuật.
-          </p>
+          <p class="kicker">03 / Nhìn lại</p>
+          <h2>Portfolio nhắc tôi về cách mình đã học hỏi và trưởng thành.</h2>
+          <div class="summary-grid">
+            <article>
+              <h3>Trải nghiệm cá nhân</h3>
+              <p>
+                Quá trình xây dựng Portfolio là một hành trình khám phá và làm chủ các kỹ năng số thiết yếu.
+                Từ việc khai thác dữ liệu chính thống đến ứng dụng AI, tôi nhận ra công nghệ không chỉ là công cụ
+                hỗ trợ mà còn giúp tối ưu hóa tư duy và khả năng sáng tạo.
+              </p>
+            </article>
+            <article>
+              <h3>Kiến thức và kỹ năng đạt được</h3>
+              <p>
+                Tôi rèn luyện được kỹ năng quản lý tệp tin, tìm kiếm học thuật, viết prompt, cộng tác trực tuyến,
+                sáng tạo nội dung số, kiểm chứng thông tin và sử dụng AI có trách nhiệm trong học tập.
+              </p>
+            </article>
+            <article>
+              <h3>Điểm tâm đắc</h3>
+              <p>
+                Điều tôi tâm đắc nhất là biết kết hợp trí tuệ cá nhân với AI để tạo ra sản phẩm học tập có chiều sâu,
+                có minh chứng rõ ràng và vẫn giữ được dấu ấn cá nhân.
+              </p>
+            </article>
+            <article>
+              <h3>Thách thức gặp phải</h3>
+              <p>
+                Thách thức lớn nhất là xác định ranh giới giữa hỗ trợ hợp lý và phụ thuộc vào AI, đồng thời phải
+                kiểm chứng thông tin để tránh sai lệch hoặc vi phạm liêm chính học thuật.
+              </p>
+            </article>
+          </div>
           <blockquote>
-            Công nghệ không chỉ là công cụ hỗ trợ, mà còn là người cộng sự giúp tối ưu hóa tư duy
-            và sáng tạo khi người học biết sử dụng có kiểm soát.
+            Những kỹ năng này sẽ là nền tảng quan trọng cho quá trình học tập, nghiên cứu và phát triển nghề nghiệp
+            trong lĩnh vực Công nghệ thông tin.
           </blockquote>
         </div>
       </section>
